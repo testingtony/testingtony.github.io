@@ -1,5 +1,6 @@
 ---
 title: Welcome
+locale: en_GB
 ---
 # Hello
 
