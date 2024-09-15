@@ -1,7 +1,6 @@
 ---
     contracts:
-    - when: 2004-2006 Senselect Biometrics
-      role: System Administrator and DBA
+    - 2004-2006 Senselect Biometrics, System Administrator and DBA
     skills:
     - J2SE, MSVC.
     - Oracle 10g, Sybase ASE 11, Intersystems Caché.

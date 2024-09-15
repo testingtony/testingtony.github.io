@@ -1,0 +1,32 @@
+
+@media (orientation: portrait) and (max-width: 500px){
+    h1 + div {
+        max-height: 0px;
+        transition: max-height 0.25s ease;
+        overflow: hidden;
+    }
+
+    #radio-summary:checked ~ #summary + div {
+        max-height: calc-size(auto);
+
+    }
+
+    #radio-skills:checked ~ #skills{
+        max-height: 1000px;
+    }
+
+    #radio-employment:checked ~ #employment + div {
+        max-height: 1000px;
+    }
+
+    #radio-contracts:checked ~ #contracts + div {
+        max-height: 1000px;
+    }
+
+    #radio-qualifications-and-education:checked ~ #qualifications-and-education + div {
+        max-height: 1000px;
+    }
+    #radio-non-qualification-courses:checked ~ #non-qualification-courses + div {
+        max-height: 1000px;
+    }
+}

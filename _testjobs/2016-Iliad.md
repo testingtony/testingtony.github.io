@@ -1,6 +1,5 @@
 ---
-when: 2016–2019 Iliad Solutions
-role: Test Analyst — T3 Switch payments testing and simulation tool
+role: 2016–2019 Iliad Solutions, Test Analyst — T3 Switch payments testing and simulation tool
 skills:
     - Java, Python, Selenium, Postman, Newman.
     - AWS, EC2, RDS, Docker, Jenkins.

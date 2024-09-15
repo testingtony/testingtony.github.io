@@ -1,7 +1,6 @@
 ---
     contracts:
-    - when: 1997–1998 Barclays Bank
-      role: Installation and Support Engineer — MI Technical Framework
+    - 1997–1998 Barclays Bank, Installation and Support Engineer — MI Technical Framework
     skills:
     - AIX 4.2.
     - Sybase SQL Server, Sybase Omniconnect, Sybase DB2 Gateway.
