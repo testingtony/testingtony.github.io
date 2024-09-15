@@ -1,4 +1,5 @@
 ---
+    type: contract
     contracts:
     - 2003–2004 InBond Ltd, IT Team Manager
     skills:

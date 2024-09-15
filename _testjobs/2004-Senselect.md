@@ -1,4 +1,5 @@
 ---
+    type: contract
     contracts:
     - 2004-2006 Senselect Biometrics, System Administrator and DBA
     skills:

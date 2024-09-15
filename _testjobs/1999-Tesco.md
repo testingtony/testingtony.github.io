@@ -1,4 +1,5 @@
 ---
+    type: contract
     contracts:
     - 1999–2000 Tesco, Back-Office Release Support
     - 1998–1999 Siemens Nixdorf/Tesco, Next-Gen EPOS Release Support

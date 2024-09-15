@@ -1,4 +1,5 @@
 ---
+type: permanent
 role: 2015–2016 Sky Betting and Gaming, Senior Test Engineer — Big Data Tribe
 skills:
     - Apache Spark, Hadoop, Hive, HBase, Impala.

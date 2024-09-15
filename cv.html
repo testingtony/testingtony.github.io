@@ -43,7 +43,8 @@ gained a solid background in the many sides of the SDLC. He uses this experience
 
 <h1 id="employment"><label for="radio-employment">Employment</label></h1>
 <div>
-{% for job in site.testjobs reversed %}
+{% assign jobs = site.testjobs | where: "type", "permanent" %}
+{% for job in jobs reversed %}
 <section class="job">
     <h2>{{ job.role | role }}.</h2>
     <ul>
@@ -58,7 +59,8 @@ gained a solid background in the many sides of the SDLC. He uses this experience
 
 <h1 id="contracts"><label for="radio-contracts">Contracts</label></h1>
 <div>
-{% for job in site.testcontracts reversed %}
+{% assign jobs = site.testjobs | where: "type", "contract" %}
+{% for job in jobs reversed %}
 <section class="contract">
     {% for contract in job.contracts %}
     <h2>{{ contract | role }}.</h2>

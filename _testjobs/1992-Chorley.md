@@ -1,4 +1,5 @@
 ---
+type: permanent
 role: 1992–1997 Chorley & Pickersgill Ltd, Programmer/System Administrator
 skills:
     - AIX 3.5, 4.1.
