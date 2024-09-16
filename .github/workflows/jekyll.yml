@@ -47,12 +47,12 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
-      - name: html to pdf
-        uses: fifsky/html-to-pdf-action@master
-        with:
-          htmlFile: ./_site/cv.html
-          outputFile: ./_site/cv.pdf
-          pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'      
+      - name: make cv pdf
+        run: |
+          sudo apt update
+          sudo apt install -y weasyprint
+          sudo ln -s $PWD/_site/assets /
+          weasyprint _site/cv.html _site/cv.pdf          
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
