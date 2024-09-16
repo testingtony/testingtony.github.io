@@ -1,112 +1,118 @@
-    $indent: 0em;
+$indent: 0em;
 
-    input[name=section] {
-        display: none;
-    }
-    
+input[name=section], #qrlink {
+    display: none;
+}
+
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@media screen {
     body {
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        background-color: #FDFDFD;
+        background-color: PapayaWhip;
+        color:FireBrick;
     }
-    
-    header {
+}
+
+header {
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+
+    +p {
         text-align: center;
-        font-size: x-large;
+    }
+}
+
+p {
+    
+    margin-top: 6px;
+    margin-bottom: 4px;
+}
+
+h1 {
+    text-align: left;
+    color: grey;
+    font-size: larger;
+    border-top: 2px solid grey;
+}
+
+h2 {
+    font-size: medium;
+    font-weight: 100;
+
+    .when, .where {
         font-weight: bold;
-    
-        +p {
-            text-align: center;
+    }
+}
+
+section {
+    margin-left: $indent;
+    margin-bottom: 30px;
+
+    h2 { 
+        margin-top: 0px;
+        margin-bottom: 0px;
+
+    }    
+}
+
+ul {
+    padding-left: 1em;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+#skills {
+    display: flex;
+    flex-wrap:  wrap;
+
+    .skill {
+        width: 30%;
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+        margin: 0px;
+
+        &:last-of-type {
+            padding-right: 0%;
         }
-    }
-    
-    p {
-        
-        margin-top: 6px;
-        margin-bottom: 4px;
-    }
-    
-    h1 {
-        text-align: left;
-        color: grey;
-        font-size: larger;
-        border-top: 2px solid grey;
-    }
-    
-    h2 {
-        font-size: medium;
-        font-weight: 100;
-    
-        .when, .where {
+
+        &:first-of-type {
+            padding-left: 0%;
+        }
+
+        h2 {
+            font-size: large;
             font-weight: bold;
-        }
-    }
-    
-    section {
-        margin-left: $indent;
-        margin-bottom: 30px;
-    
-        h2 { 
-            margin-left: -$indent;
-            margin-top: 0px;
+            padding-bottom: 0px;
+            padding-left: $indent;
             margin-bottom: 0px;
-
-        }    
-    }
-    
-    ul {
-        padding-left: 1em;
-        margin-top: 8px;
-        margin-bottom: 8px;
-    }
-    
-    #skills {
-        display: flex;
-        flex-wrap:  wrap;
-    
-        .skill {
-            width: 30%;
-            padding-left: 2.5%;
-            padding-right: 2.5%;
-            margin: 0px;
-    
-            &:last-of-type {
-                padding-right: 0%;
-            }
-    
-            &:first-of-type {
-                padding-left: 0%;
-            }
-    
-            h2 {
-                font-size: large;
-                font-weight: bold;
-                padding-bottom: 0px;
-                padding-left: $indent;
-                margin-bottom: 0px;
-            }
-
-            ul {
-                margin: 0px;
-            }
-
-            .what {
-                width: 60%;
-                display: inline-block
-            }
-
         }
-    }
-    
-    .education {
+
         ul {
-            list-style-type: none;
-            padding-left: 0px;
-            
-            li span {
-                float: left;
-                width: 8em;
-                text-align: right;
-                padding-right: 1em;
-            }
+            margin: 0px;
+        }
+
+        .what {
+            width: 60%;
+            display: inline-block
+        }
+
+    }
+}
+
+.education {
+    ul {
+        list-style-type: none;
+        padding-left: 0px;
+        
+        li span {
+            float: left;
+            width: 8em;
+            text-align: right;
+            padding-right: 1em;
         }
     }
+}

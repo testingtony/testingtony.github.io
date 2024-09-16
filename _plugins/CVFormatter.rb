@@ -9,7 +9,7 @@ module CVFormatter
     whenwhere, role = source.split(/,/,2)
     dates, who = whenwhere.split(/\s/, 2)
 
-    return "<span class='when'>#{dates}</span> <span class='where'>#{who}</span>, #{role}"
+    return "<span class='when'>#{dates} </span><span class='where'>#{who}</span>, #{role}"
   end
 end
 

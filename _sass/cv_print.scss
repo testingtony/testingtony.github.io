@@ -1,16 +1,38 @@
 @media print {
     @page {
-      size: a4;
+        size: a4;
+        margin: 12.5mm;
     }
 
-    $indent: 0em;
+    $fontsize: 10pt;
+    $indent: 20mm;
+  
+    input[name=section] {
+        display: none;
+    }
+
+    #qrlink {
+        display: block;
+        position:absolute;
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: x-small;
+        text-align: center;
+        border-right: 10pt solid white;
+        background-color: white;
+        p {
+            margin: 0pt;
+            padding: 0pt;
+        }
+    }
+
     body {
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: $fontsize;
     }
     
     header {
         text-align: center;
-        font-size: x-large;
+        font-size: 13pt;
         font-weight: bold;
     
         +p {
@@ -18,38 +40,74 @@
         }
     }
     
-    p {
-        font-family: 'Times New Roman', Times, serif;
-    }
-    
     h1 {
         text-align: right;
-        color: grey;
-        font-size: larger;
-        border-top: 2px solid grey;
+        color: lightgrey;
+        font-size: 12pt;
+        border-top: 2pt solid lightgrey;
+        margin-bottom: 0pt;
+        page-break-after: avoid;
     }
     
     h2 {
-        font-size: medium;
-        font-weight: 100;
-    
+        font-weight: normal;
+        font-size: $fontsize;
+        padding-left: 0cm;
+        margin-top: 3pt;
+        margin-bottom: 0pt;
+        page-break-after: avoid;
         .when, .where {
             font-weight: bold;
         }
     }
-    
-    section {
-        margin-left: $indent;
-    
-        h2 { 
-            margin-left: -$indent;
+
+    .job, .contract, .education {
+        p {
+            padding-left: $indent;
+
+            margin-top: 5pt;
+            margin-bottom: 0pt;
+            &:last-child {
+                margin-bottom: 0pt;
+            }
         }
-    
+
+        ul {
+            padding-left: $indent;
+            li {
+              color: black;
+              margin-left: 1em
+            }
+        }
+    }
+
+    .job, .contract {
+        padding-top: 14pt;
+        &:first-child {
+           padding-top: 6pt;
+        }
+        .intro {
+            page-break-inside: avoid;
+        }
+    }
+
+
+    .what {
+        width: 60%;
+        display: inline-block
+    }
+
+
+
+
+    .when {
+        display: inline-block;
+        width: $indent - 0.2cm;
+        margin-right: 0.2cm;
+        text-align: right;
     }
     
-    ul {
-        padding-left: 1em;
-    }
+
     
     #skills {
         display: flex;
@@ -70,30 +128,41 @@
             }
     
             h2 {
-                font-size: large;
                 font-weight: bold;
-                padding-bottom: 0px;
-                padding-left: $indent;
+                padding-bottom: 0pt;
+                padding-left: 1em;
                 margin-bottom: 0px;
             }
     
-            table {
-                width: 100%;
+            ul {
+                margin: 0px;
+                padding-left: 1em;
+            }
+
+            .what {
+                width: 50%;
+                display: inline-block
             }
         }
     }
     
+    #education {
+        page-break-inside: avoid;
+    }
+
+
     .education {
         ul {
             list-style-type: none;
-            padding-left: 0px;
+            padding-left: 0pt;
+            margin-left: 0pt;
             
             li span {
-                float: left;
-                width: 8em;
+                width: $indent - 0.20cm;
                 text-align: right;
-                padding-right: 1em;
-            }
+                margin-right: 0cm;
+                padding-bottom: 3pt;
+                }
         }
     }
 }

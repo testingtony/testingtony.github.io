@@ -1,9 +1,10 @@
 ---
 ---
-
-@import "cv_screen";
 @import "cv_print";
-@import "cv_mobile";
+
+@media screen {
+    @import "cv_screen";
+}
 
 
 

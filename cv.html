@@ -9,6 +9,11 @@
 <input type="radio" name="section" id="radio-qualifications-and-education"/>
 <input type="radio" name="section" id="radio-non-qualification-courses"/>
 
+<div id="qrlink">
+    <img src="https://quickchart.io/qr?text=is.gd%2Ftonyhcv&ecLevel=L&margin=0&size=45&format=svg"/>
+    <p>is.gd/tonyhcv</p>
+</div>
+
 <header>Tony John Holroyd</header>
 <p>linkedin@tonyholroyd.co.uk / 0780 332 1919</p>
 
@@ -46,12 +51,12 @@ gained a solid background in the many sides of the SDLC. He uses this experience
 {% assign jobs = site.testjobs | where: "type", "permanent" %}
 {% for job in jobs reversed %}
 <section class="job">
-    <h2>{{ job.role | role }}.</h2>
-    <ul>
-        {% for skill in job.skills %}
-            <li>{{ skill }}</li>
-        {% endfor %}
-    </ul>
+        <h2>{{ job.role | role }}.</h2>
+        <ul>
+            {% for skill in job.skills %}
+                <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
     {{ job.content }}
 </section>
 {% endfor %}
@@ -63,22 +68,23 @@ gained a solid background in the many sides of the SDLC. He uses this experience
 {% for job in jobs reversed %}
 <section class="contract">
     {% for contract in job.contracts %}
-    <h2>{{ contract | role }}.</h2>
-    {% endfor %}
-    <ul>
-        {% for skill in job.skills %}
-            <li>{{ skill }}</li>
+        <h2>{{ contract | role }}.</h2>
         {% endfor %}
-    </ul>
+        <ul>
+            {% for skill in job.skills %}
+                <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
     {{ job.content }}
 </section>
 {% endfor %}
 </div>
 
+<div id="education">
 {% for education in site.data.testcv.education %}
 <h1 id="{{ education[0] | slugify }}"><label for="radio-{{ education[0] | slugify }}">{{ education[0] }}</label></h1>
 <div>
-    <section class="{{ education[0] | slugify }}">
+    <section class="education {{ education[0] | slugify }}">
     <ul>
         {% for qual in education[1] %}
         <li>{{ qual | qualification }}</li>
@@ -87,3 +93,4 @@ gained a solid background in the many sides of the SDLC. He uses this experience
     </section>
 </div>
 {% endfor %}
+</div>
