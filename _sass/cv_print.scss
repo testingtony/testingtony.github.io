@@ -61,6 +61,11 @@
         }
     }
 
+    a {
+        color: inherit;
+        text-decoration: inherit;
+    }
+
     .job, .contract, .education {
         p {
             padding-left: $indent;

@@ -4,15 +4,17 @@ input[name=section], #qrlink {
     display: none;
 }
 
-
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: cornsilk;
 }
 
-@media screen {
-    body {
-        background-color: PapayaWhip;
-        color:FireBrick;
+
+h2 {
+    font-size: 120%;
+    font-weight: 400;
+
+    .where {
+        font-weight: bolder;
     }
 }
 
@@ -23,82 +25,5 @@ header {
 
     +p {
         text-align: center;
-    }
-}
-
-p {
-    
-    margin-top: 6px;
-    margin-bottom: 4px;
-}
-
-h1 {
-    text-align: left;
-    color: grey;
-    font-size: larger;
-    border-top: 2px solid grey;
-}
-
-h2 {
-    font-size: medium;
-    font-weight: 100;
-
-    .when, .where {
-        font-weight: bold;
-    }
-}
-
-section {
-    margin-left: $indent;
-    margin-bottom: 30px;
-
-    h2 { 
-        margin-top: 0px;
-        margin-bottom: 0px;
-
-    }    
-}
-
-ul {
-    padding-left: 1em;
-    margin-top: 8px;
-    margin-bottom: 8px;
-}
-
-#skills {
-    .skill {
-        margin: 0px;
-
-
-        h2 {
-            font-size: large;
-            font-weight: bold;
-            padding-bottom: 0px;
-            margin-bottom: 0px;
-        }
-
-        ul {
-            margin: 0px;
-        }
-
-        .what {
-            width: 60%;
-            display: inline-block
-        }
-
-    }
-}
-
-.education {
-    ul {
-        list-style-type: none;
-        padding-left: 0px;
-        
-        li span {
-            float: left;
-            width: 8em;
-            text-align: right;
-            padding-right: 1em;
-        }
     }
 }

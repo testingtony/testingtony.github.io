@@ -13,7 +13,7 @@
     <img src="https://quickchart.io/qr?text=is.gd%2Ftonyhcv&ecLevel=L&margin=0&size=45&format=svg"/>
     <p>is.gd/tonyhcv</p>
 </div>
-<div class="container">
+<div class="container-xxl">
 <header>Tony John Holroyd</header>
 <p>linkedin@tonyholroyd.co.uk / 0780 332 1919</p>
 
@@ -33,9 +33,9 @@ gained a solid background in the many sides of the SDLC. He uses this experience
 <h1><label for="radio-skills">Key Skills</label></h1>
 
 
-<div id="skills" class="row">
+<div id="skills" class="row mb-5">
     {% for skillset in site.data.testcv.skills %}
-        <section class="skill col-sm-4">
+        <section class="skill col-md-4">
             <h2>{{ skillset[0] }}</h2>
             <ul>
                 {% for skill in skillset[1] %}
@@ -51,8 +51,8 @@ gained a solid background in the many sides of the SDLC. He uses this experience
 {% assign jobs = site.testjobs | where: "type", "permanent" %}
 {% for job in jobs reversed %}
     <section class="job">
-        <div class="row">
-            <div class="col-md-3">
+        <div class="row mb-5">
+            <div class="col-md-4">
             <h2>{{ job.role | role }}.</h2>
             <ul>
                 {% for skill in job.skills %}
@@ -60,7 +60,7 @@ gained a solid background in the many sides of the SDLC. He uses this experience
                 {% endfor %}
             </ul>
         </div>
-        <div class="col-md-9">
+        <div class="col-md-8">
             {{ job.content }}
         </div>
     </div>
@@ -72,8 +72,8 @@ gained a solid background in the many sides of the SDLC. He uses this experience
 <div>
 {% assign jobs = site.testjobs | where: "type", "contract" %}
 {% for job in jobs reversed %}
-<section class="contract row">
-    <div class="col-md-3">
+<section class="contract row mb-5">
+    <div class="col-md-4">
     {% for contract in job.contracts %}
         <h2>{{ contract | role }}.</h2>
         {% endfor %}
@@ -83,7 +83,7 @@ gained a solid background in the many sides of the SDLC. He uses this experience
             {% endfor %}
         </ul>
     </div>
-    <div class="col-md-9">
+    <div class="col-md-8">
     {{ job.content }}
     </div>
 </section>
