@@ -66,28 +66,14 @@ ul {
 }
 
 #skills {
-    display: flex;
-    flex-wrap:  wrap;
-
     .skill {
-        width: 30%;
-        padding-left: 2.5%;
-        padding-right: 2.5%;
         margin: 0px;
 
-        &:last-of-type {
-            padding-right: 0%;
-        }
-
-        &:first-of-type {
-            padding-left: 0%;
-        }
 
         h2 {
             font-size: large;
             font-weight: bold;
             padding-bottom: 0px;
-            padding-left: $indent;
             margin-bottom: 0px;
         }
 

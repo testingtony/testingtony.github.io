@@ -13,7 +13,7 @@
     <img src="https://quickchart.io/qr?text=is.gd%2Ftonyhcv&ecLevel=L&margin=0&size=45&format=svg"/>
     <p>is.gd/tonyhcv</p>
 </div>
-
+<div class="container">
 <header>Tony John Holroyd</header>
 <p>linkedin@tonyholroyd.co.uk / 0780 332 1919</p>
 
@@ -33,16 +33,16 @@ gained a solid background in the many sides of the SDLC. He uses this experience
 <h1><label for="radio-skills">Key Skills</label></h1>
 
 
-<div id="skills">
+<div id="skills" class="row">
     {% for skillset in site.data.testcv.skills %}
-    <section class="skill">
-        <h2>{{ skillset[0] }}</h2>
-        <ul>
-            {% for skill in skillset[1] %}
-            <li><span class="what">{{ skill[0] }}</span> <span class="howlong">{{ skill[1] }}</span></li>
-            {% endfor %}
-        </ul>
-    </section>
+        <section class="skill col-sm-4">
+            <h2>{{ skillset[0] }}</h2>
+            <ul>
+                {% for skill in skillset[1] %}
+                <li><span class="what">{{ skill[0] }}</span> <span class="howlong">{{ skill[1] }}</span></li>
+                {% endfor %}
+            </ul>
+        </section>
     {% endfor %}
 </div>
 
@@ -50,14 +50,20 @@ gained a solid background in the many sides of the SDLC. He uses this experience
 <div>
 {% assign jobs = site.testjobs | where: "type", "permanent" %}
 {% for job in jobs reversed %}
-<section class="job">
-        <h2>{{ job.role | role }}.</h2>
-        <ul>
-            {% for skill in job.skills %}
-                <li>{{ skill }}</li>
-            {% endfor %}
-        </ul>
-    {{ job.content }}
+    <section class="job">
+        <div class="row">
+            <div class="col-md-3">
+            <h2>{{ job.role | role }}.</h2>
+            <ul>
+                {% for skill in job.skills %}
+                    <li>{{ skill }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col-md-9">
+            {{ job.content }}
+        </div>
+    </div>
 </section>
 {% endfor %}
 </div>
@@ -66,7 +72,8 @@ gained a solid background in the many sides of the SDLC. He uses this experience
 <div>
 {% assign jobs = site.testjobs | where: "type", "contract" %}
 {% for job in jobs reversed %}
-<section class="contract">
+<section class="contract row">
+    <div class="col-md-3">
     {% for contract in job.contracts %}
         <h2>{{ contract | role }}.</h2>
         {% endfor %}
@@ -75,7 +82,10 @@ gained a solid background in the many sides of the SDLC. He uses this experience
                 <li>{{ skill }}</li>
             {% endfor %}
         </ul>
+    </div>
+    <div class="col-md-9">
     {{ job.content }}
+    </div>
 </section>
 {% endfor %}
 </div>
@@ -93,4 +103,6 @@ gained a solid background in the many sides of the SDLC. He uses this experience
     </section>
 </div>
 {% endfor %}
+</div>
+
 </div>

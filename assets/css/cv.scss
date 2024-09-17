@@ -1,8 +1,12 @@
 ---
 ---
-@import "cv_print";
+
+@media print {
+    @import "cv_print";
+}
 
 @media screen {
+    @import "bootstrap";
     @import "cv_screen";
 }
 
