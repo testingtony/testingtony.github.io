@@ -12,3 +12,8 @@ defaults:
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-autoprefixer
+
+autoprefixer:
+  browsers:
+    - last 4 versions
