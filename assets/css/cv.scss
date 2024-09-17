@@ -1,14 +1,13 @@
 ---
 ---
 
-@media print {
-    @import "cv_print";
-}
-
 @media screen {
-    @import "bootstrap";
+    @import "bootstrap/bootstrap-reboot";
+    @import "bootstrap/bootstrap-grid";
+    @import "bootstrap/utilities";
     @import "cv_screen";
 }
 
-
-
+@media print {
+    @import "cv_print";
+}
