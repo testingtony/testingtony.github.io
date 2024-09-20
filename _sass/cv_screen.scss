@@ -11,8 +11,18 @@ input[name=section], #qrlink {
 }
 
 
+body {
+    background-color: cornsilk;
+}
+
+
 h2 {
     font-size: 120%;
+    font-weight: 400;
+
+    .where {
+        font-weight: bolder;
+    }
 }
 
 header {

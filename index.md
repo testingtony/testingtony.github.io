@@ -1,6 +1,7 @@
 ---
-title: Welcome
+title: tonyholroyd.co.uk
 lang: en_GB
+layout: default
 ---
 # Hello
 

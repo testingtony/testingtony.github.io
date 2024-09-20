@@ -17,3 +17,7 @@ plugins:
 autoprefixer:
   browsers:
     - last 4 versions
+
+sass:
+  style: compressed
+  quiet_deps: true
