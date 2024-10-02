@@ -19,5 +19,5 @@ autoprefixer:
     - last 4 versions
 
 sass:
-  style: compressed
+  # style: compresse
   quiet_deps: true

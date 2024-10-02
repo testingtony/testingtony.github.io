@@ -1,0 +1,142 @@
+--- 
+---
+
+@page {
+    size: a4;
+    margin: 12.5mm;
+
+}
+
+$fontsize: 10pt;
+$indent: 22mm;
+
+body {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: $fontsize;
+    // border: 1px solid salmon;
+    width: 205mm;
+    border: 1px solid black;
+}
+
+#qrlink {
+    display: block;
+    position:absolute;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    text-align: center;
+    border-right: 10pt solid white;
+    background-color: white;
+    p {
+        margin: 0pt;
+        padding: 0pt;
+    }
+}
+
+
+header {
+    font-size: 13pt;
+    font-weight: bold;
+    text-align: center;
+
+    &+p {
+        margin-top: 1pt;
+        text-align: center;
+    }
+}
+
+h1 {
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: right;
+    color: lightgray;
+    border-top: 2px solid lightgray;
+    page-break-after: avoid;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.keyskill {
+    display: flex;
+
+    &>section {
+        width: 33%;
+
+        .what {
+            display: inline-block;
+            width: 50%;
+        }
+    }
+
+    h2 {
+        font-size: $fontsize;
+        font-weight: bold;
+        padding-left: 2em;
+        margin-top: 0cm;
+        margin-bottom: 0cm;
+    }
+
+    ul {
+        margin-top: 0cm;
+        margin-bottom: 0cm;
+    }
+}
+
+.job {
+    position: relative;
+ 
+    .description, .skills, .details {
+        position: relative;
+        margin-left: $indent;
+        margin-top: 0cm;
+    }
+
+    p {
+        margin-top: 0cm;
+    }
+
+    .description {
+        font-size: $fontsize;
+        font-weight: 500;
+        margin-top: 0cm;
+        margin-bottom: 0cm;
+        page-break-after: avoid;
+
+        .who {
+            font-weight: bold; 
+            &::after {
+                font-weight: 500;
+                content: ", ";
+            }
+        }
+
+        .team::before {
+            content: "— ";
+        }
+
+    }
+
+    .skills {
+        margin-top: 2pt;
+        margin-bottom: 2pt;
+        padding-left: 0.4cm;
+        page-break-inside: avoid;
+    }
+
+    .when {
+        position: absolute;
+        top: 0cm;
+        left: 0cm;
+        margin-top: 0cm;
+        width: $indent - 2mm;
+        text-align: right;
+        list-style: none;
+        padding-left: 0cm;
+    }
+
+
+    
+}

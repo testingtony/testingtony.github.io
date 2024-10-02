@@ -1,5 +1,9 @@
 ---
     type: contract
+    who: Senselect Biometrics
+    role: System Administrator and DBA
+    when:
+    - 2004-2006
     contracts:
     - 2004-2006 Senselect Biometrics, System Administrator and DBA
     skills:

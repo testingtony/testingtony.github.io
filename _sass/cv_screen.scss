@@ -1,36 +1,26 @@
-input[name=section], #qrlink {
+
+#qrlink {
     display: none;
 }
 
-.container-xxl {
-    background-color: cornsilk;
+.when {
+    font-style: italic;
 }
-
-.where {
-    font-weight:bolder;
-}
-
-
-body {
-    background-color: cornsilk;
-}
-
 
 h2 {
-    font-size: 120%;
+    @include font-size(1.1rem);
     font-weight: 400;
 
-    .where {
+    .what {
         font-weight: bolder;
     }
 }
 
 header {
+    @include font-size(3rem);
     text-align: center;
-    font-size: x-large;
-    font-weight: bold;
-
     +p {
         text-align: center;
     }
+
 }

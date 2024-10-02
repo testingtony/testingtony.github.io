@@ -1,8 +1,10 @@
 ---
     type: contract
-    contracts:
-    - 1999–2000 Tesco, Back-Office Release Support
-    - 1998–1999 Siemens Nixdorf/Tesco, Next-Gen EPOS Release Support
+    who: Siemens Nixdorf/Tesco
+    role:  Next-Gen EPOS Release Support
+    when: 
+    - 1999-2000
+    - 1998-1999
     skills:
     - Ksh.
     - AIX 4.3.1.

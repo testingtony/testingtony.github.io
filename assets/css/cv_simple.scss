@@ -1,0 +1,12 @@
+---
+---
+
+@media screen {
+    @import "bootstrap";
+    @import "bootstrap/vendor/rfs";
+    @import "cv_screen";     
+}
+
+@media print {
+    @import "cv_print";
+}

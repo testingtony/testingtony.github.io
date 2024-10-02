@@ -1,43 +1,27 @@
 ---
+    css: cv_simple
     title: Tony Holroyd - CV
+    layout: cv
 ---
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"/>
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/assets/css/cv2 print.css">
-  </head>
-  <body>
-
-
-
+<div id="qrlink">
+    <img src="https://quickchart.io/qr?text=is.gd%2Ftonyhcv&ecLevel=L&margin=0&size=45&format=svg"/>
+    <p>is.gd/tonyhcv</p>
+</div>
 <div class="container-xxl">
-    <div id="qrlink">
-        <img src="https://quickchart.io/qr?text=is.gd%2Ftonyhcv&ecLevel=L&margin=0&size=45&format=svg"/>
-        <p>is.gd/tonyhcv</p>
-    </div>
 <header class="display-5">Tony John Holroyd</header>
 <p>linkedin@tonyholroyd.co.uk / 0780 332 1919</p>
 
+{% assign summary = site.testjobs | where: "type", "summary" | first %}
 
-
-
-{% assign cvdetails = site.testjobs %}
-
-{% assign summary = cvdetails | where: "type", "summary" | first %}
-
-<h1 id="Summary">Summary</h1>
+<h1 id="summary">Summary</h1>
 <div>
 {{ summary.content }}
 </div>
 
-<h1 id="keyskills">Key Skills</h1>
-<div class="keyskill row mb-5">
+<h1>Key Skills</h1>
+<div id="skills" class="row mb-5">
         {% for skillset in summary.skills %} 
-            <section class="col-md-4 col-sm-6">
+            <section class="skill col-md-4 col-sm-6">
                 <h2>{{ skillset[0] }}</h2>
                 <ul>
                     {% for skill in skillset[1] %}
@@ -48,23 +32,16 @@
         {% endfor %}
 </div>
 
-
-
-
-
 <h1 id="employment">Employment</h1>
 <div>
-{% assign jobs = cvdetails | where: "type", "permanent" %}
+{% assign jobs = site.testjobs | where: "type", "permanent" %}
 {% for job in jobs reversed %}
 <section class="job row mb-5">
     <div class="col-lg-3 col-md-4">
-        <h2 class="description">
-            <span class="who">{{ job.who }}</span>
-            <span class="role">{{ job.role }}</span>
-            {%- if job.team %}
-            <span class="team">{{ job.team }}</span>
-            {%- endif -%}.
-        </h2>
+        <h2 class="role">
+            <span class="where">{{ job.who }}</span>,
+            <span class="what">{{ job.role }}</span>.
+            </h2>
         <ul class="list-unstyled when">
         {% for dates in job.when %}
         <li>{{ dates }}</li>
@@ -85,17 +62,14 @@
 
 <h1 id="contracts">Contracts</h1>
 <div>
-{% assign jobs = cvdetails | where: "type", "contract" %}
+{% assign jobs = site.testjobs | where: "type", "contract" %}
 {% for job in jobs reversed %}
 <section class="job row mb-5">
     <div class="col-lg-3 col-md-4">
-        <h2 class="description">
-            <span class="who">{{ job.who }}</span>
-            <span class="role">{{ job.role }}</span>
-            {%- if job.team %}
-            <span class="team">{{ job.team }}</span>
-            {%- endif -%}.
-        </h2>
+        <h2 class="role">
+            <span class="where">{{ job.who }}</span>,
+            <span class="what">{{ job.role }}</span>.
+            </h2>
         <ul class="list-unstyled when">
         {% for dates in job.when %}
         <li>{{ dates }}</li>
@@ -119,11 +93,9 @@
 <h1 id="{{ education[0] | slugify }}">{{ education[0] }}</h1>
 <div>
     <section class="education {{ education[0] | slugify }}">
-    <ul class="list-unstyled">
+    <ul>
         {% for qual in education[1] %}
-        {% assign when = qual | split: " " | first %}
-        {% assign what = qual | split: " " | shift | join: " " %}
-        <li><span class="when">{{ when }}</span> <span class="what">{{ what }}</span></li>
+        <li>{{ qual | qualification }}</li>
         {% endfor %}
     </ul>
     </section>
@@ -131,13 +103,4 @@
 {% endfor %}
 </div>
 
-
-
-
-
 </div>
-
-</body>
-
-
-</html>

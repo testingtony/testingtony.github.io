@@ -9,5 +9,8 @@
 }
 
 @media print {
+    .container {
+        width: 210mm;
+    }
     @import "cv_print";
 }

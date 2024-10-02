@@ -5,11 +5,8 @@
     }
 
     $fontsize: 10pt;
-    $indent: 20mm;
+    $indent: 22mm;
   
-    input[name=section] {
-        display: none;
-    }
 
     #qrlink {
         display: block;
@@ -45,16 +42,12 @@
         color: lightgrey;
         font-size: 12pt;
         border-top: 2pt solid lightgrey;
-        margin-bottom: 0pt;
         page-break-after: avoid;
     }
     
     h2 {
         font-weight: normal;
         font-size: $fontsize;
-        padding-left: 0cm;
-        margin-top: 3pt;
-        margin-bottom: 0pt;
         page-break-after: avoid;
         .when, .where {
             font-weight: bold;
@@ -68,8 +61,6 @@
 
     .job, .contract, .education {
         p {
-            padding-left: $indent;
-
             margin-top: 5pt;
             margin-bottom: 0pt;
             &:last-child {
@@ -78,7 +69,6 @@
         }
 
         ul {
-            padding-left: $indent;
             li {
               color: black;
               margin-left: 1em
@@ -86,32 +76,24 @@
         }
     }
 
+    .list-unstyled {
+        list-style: none;
+        padding-left: none;
+        width: $indent - 0.2cm;
+        text-align: right;
+        float: left;
+    }
+
     .job, .contract {
-        padding-top: 14pt;
+        margin-top: 14pt;
         &:first-child {
-           padding-top: 6pt;
+           margin-top: 6pt;
         }
         .intro {
             page-break-inside: avoid;
         }
     }
 
-
-    .what {
-        width: 60%;
-        display: inline-block
-    }
-
-
-
-
-    .when {
-        display: inline-block;
-        width: $indent - 0.2cm;
-        margin-right: 0.2cm;
-        text-align: right;
-    }
-    
 
     
     #skills {
@@ -163,10 +145,65 @@
             margin-left: 0pt;
             
             li span {
-                width: $indent - 0.20cm;
+                position: relative;
+                width: $indent - 0.20cm !important;
                 text-align: right;
                 margin-right: 0cm;
                 padding-bottom: 3pt;
+                border: 1px solid black;
                 }
         }
     }
+
+
+
+.contract, .job {
+        position: relative;
+        padding-left: 0mm;
+        padding-right: 0mm;
+        margin-left: 0mm;
+        margin-right: 0mm;
+
+
+}
+
+.role, .skills, .details {
+    position: relative;
+    left: $indent;
+    padding-left: 0mm;
+    padding-right: 0mm;
+    margin-left: 0mm;
+    margin-right: 0mm;
+    width: 180mm - $indent;
+    margin-top: 0mm;
+    margin-bottom: 0mm;
+    // border: 1px solid black;
+}
+
+.role {
+    margin-top: 0cm;
+    padding-top: 0cm;
+    padding-bottom: 2pt;
+}
+
+.when {
+    font-size: $fontsize;
+    list-style: none;
+    position: absolute;
+    left: 0cm;
+    width: $indent - 2mm;
+    top: 0cm;
+    text-align: right;
+    padding-left: 0cm;
+    padding-right: 0cm;
+    padding-top: 0cm;
+    margin-top: 0cm;
+    margin-left: 0cm;
+    margin-right: 0cm;
+    li {
+        margin-left: 0cm !important;
+    }
+}
+
+.job {
+}

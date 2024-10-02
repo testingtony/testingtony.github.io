@@ -1,7 +1,10 @@
 ---
     type: contract
+    who: InBond Ltd
+    when: 2003–2004
+    role: IT Team Manager
     contracts:
-    - 2003–2004 InBond Ltd, IT Team Manager
+    - 
     skills:
     - Perl, Bash.
     - Oracle 9g, Crystal Reports.

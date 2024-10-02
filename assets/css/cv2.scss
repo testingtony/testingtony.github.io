@@ -1,0 +1,74 @@
+--- 
+---
+#qrlink {
+    display: none;
+}
+
+header {
+    text-align: center;
+     &+p {
+        text-align: center;
+    }
+}
+
+h2 {
+    font-size: 1.1rem;
+    font-weight: 400;
+
+}
+
+.keyskill {
+    h2 {
+        font-weight: 500;
+    }
+
+    .what {
+        display: inline-block;
+        width: 50%;
+    }
+}
+
+.job {
+    .when {
+        font-style: italic;
+    }
+
+    h2 {
+
+
+        @media (min-width: 768px) {
+            display: flex;
+            flex-direction: column;
+
+            .who { order: 2;}
+            .role { order: 1;}
+            .team { order: 3;}
+        }
+
+        @media (max-width: 768px) {
+            .who::after {
+                content: ", "
+            }
+
+            .team::before {
+                content: "— "
+            }
+        }
+
+        .who {
+            font-weight: 500;
+        }
+
+    }
+}
+
+
+.education {
+    .when {
+        display: inline-block;
+        width: 7em;
+        text-align: right;
+        padding-right: 4px;
+    }
+}
+
