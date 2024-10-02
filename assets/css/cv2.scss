@@ -33,10 +33,11 @@ h2 {
         font-style: italic;
     }
 
-    h2 {
 
 
-        @media (min-width: 768px) {
+    @media (min-width: 768px) {
+        h2 {
+
             display: flex;
             flex-direction: column;
 
@@ -44,8 +45,10 @@ h2 {
             .role { order: 1;}
             .team { order: 3;}
         }
+    }
 
-        @media (max-width: 768px) {
+    @media (max-width: 768px) {
+        h2 {
             .who::after {
                 content: ", "
             }
@@ -53,13 +56,19 @@ h2 {
             .team::before {
                 content: "— "
             }
-        }
 
-        .who {
-            font-weight: 500;
+                &::after {
+                content:".";
+            }
+    
         }
-
     }
+
+    .who {
+        font-weight: 500;
+    }
+
+    
 }
 
 
