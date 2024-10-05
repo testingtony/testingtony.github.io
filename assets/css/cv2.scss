@@ -72,9 +72,7 @@ h2 {
             flex-direction: column;
             // align-items: center;
 
-            .who { order: 2; }
-            .role { order: 1;}
-            .team { order: 3;}
+
         }
         
 //        .when > li {text-align: center;}
@@ -82,18 +80,17 @@ h2 {
 
     @media (max-width: 768px) {
         h2 {
-            .who::after {
-                content: ", "
+            .who::before {
+                content: "— "
             }
 
             .team::before {
-                content: "— "
+                content: ", "
             }
 
             &::after {
                 content:".";
             }
-    
         }
     }
 

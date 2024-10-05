@@ -101,27 +101,24 @@ a {
 
     .description {
         font-size: $fontsize;
-        font-weight: 500;
+        font-weight: 400;
         margin-top: 0cm;
         margin-bottom: 0cm;
         page-break-after: avoid;
 
+        .role {
+            font-weight: 600;
+        }
+
         .who {
-            font-weight: bold; 
-            &::after {
-                font-weight: 500;
-                content: ", ";
+            &::before {
+                content: "— ";
             }
         }
 
         .team::before {
-            content: "— ";
+            content: ", ";
         }
-
-        &::after {
-            content:".";
-        }
-
 
     }
 
