@@ -12,7 +12,8 @@ $indent: 22mm;
 
 body {
     position: relative;
-    font-family: Arial, Helvetica, sans-serif;
+    // font-family: Arial, Helvetica, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: $fontsize;
     // border: 1px solid salmon;
     // width: 205mm;
@@ -115,6 +116,11 @@ a {
         .team::before {
             content: "— ";
         }
+
+        &::after {
+            content:".";
+        }
+
 
     }
 

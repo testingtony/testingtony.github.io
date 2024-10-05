@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"/>
     <title>{{ page.title }}</title>
     <link rel="stylesheet" media="print" href="/assets/css/cv2 print.css">
-    <link rel="stylesheet" media="screen" href="/assets/css/bootstrap.css">
+    <!-- <link rel="stylesheet" media="screen" href="/assets/css/bootstrap.css"> -->
     <link rel="stylesheet" media="screen" href="/assets/css/cv2.css">
   </head>
   <body>
@@ -18,7 +18,7 @@
 
 <div class="container-xxl">
     <div id="qrlink">
-        <img src="https://quickchart.io/qr?text=is.gd%2Ftonyhcv&ecLevel=L&margin=0&size=45&format=svg"/>
+        <img src="https://quickchart.io/qr?text=is.gd%2Ftonyhcv&ecLevel=L&margin=0&size=45&format=svg" alt=""/>
         <p>is.gd/tonyhcv</p>
     </div>
 <header class="display-5">Tony John Holroyd</header>
@@ -59,20 +59,20 @@
 {% assign jobs = cvdetails | where: "type", "permanent" %}
 {% for job in jobs reversed %}
 <section class="job row mb-5">
-    <div class="col-lg-3 col-md-4">
-        <h2 class="description">
+    <div class="headline row col-lg-3 col-md-4">
+        <h2 class="description col-sm-12">
             <span class="who">{{ job.who }}</span>
             <span class="role">{{ job.role }}</span>
             {%- if job.team %}
             <span class="team">{{ job.team }}</span>
             {%- endif -%}
         </h2>
-        <ul class="list-unstyled when">
+        <ul class="list-unstyled when col-sm-3 col-md-12">
         {% for dates in job.when %}
         <li>{{ dates }}</li>
         {% endfor %}
         </ul>
-        <ul class="skills">
+        <ul class="skills col-sm-9 col-md-12">
             {% for skill in job.skills %}
                 <li>{{ skill }}</li>
             {% endfor %}
@@ -90,20 +90,20 @@
 {% assign jobs = cvdetails | where: "type", "contract" %}
 {% for job in jobs reversed %}
 <section class="job row mb-5">
-    <div class="col-lg-3 col-md-4">
-        <h2 class="description">
+    <div class="headline row col-lg-3 col-md-4">
+        <h2 class="description col-sm-12">
             <span class="who">{{ job.who }}</span>
             <span class="role">{{ job.role }}</span>
             {%- if job.team %}
             <span class="team">{{ job.team }}</span>
             {%- endif -%}
         </h2>
-        <ul class="list-unstyled when">
+        <ul class="list-unstyled when col-sm-3 col-md-12">
         {% for dates in job.when %}
         <li>{{ dates }}</li>
         {% endfor %}
         </ul>
-        <ul class="skills">
+        <ul class="skills col-sm-9 col-md-12">
             {% for skill in job.skills %}
                 <li>{{ skill }}</li>
             {% endfor %}
