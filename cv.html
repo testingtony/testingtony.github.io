@@ -72,11 +72,13 @@
         <li>{{ dates }}</li>
         {% endfor %}
         </ul>
+        {% if job.skills %}
         <ul class="skills col-sm-9 col-md-12">
             {% for skill in job.skills %}
                 <li>{{ skill }}</li>
             {% endfor %}
         </ul>
+        {% endif %}
     </div>
     <div class="details col-lg-9 col-md-8">
     {{ job.content }}
@@ -125,7 +127,7 @@
         {% for qual in education[1] %}
         {% assign when = qual | split: " " | first %}
         {% assign what = qual | split: " " | shift | join: " " %}
-        <li><span class="when">{{ when }}</span> <span class="what">{{ what }}</span></li>
+        <li class="row"><span class="when col-lg-3 col-md-4 col-3">{{ when }}</span> <span class="what col-lg-9 col-md-8 col-9">{{ what }}</span></li>
         {% endfor %}
     </ul>
     </section>

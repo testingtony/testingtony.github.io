@@ -49,21 +49,61 @@ h2 {
 }
 
 .job {
+    border-left: 2px solid lightblue;
 
     .headline { 
         height: fit-content;
+        position: relative;
+
+        @media (min-width:  breakpoint-min("md")) {
+            &::before {
+                content: "⚪︎";
+                color: lightblue;
+                position: absolute;
+                font-size: 75%;
+                left: .25em;
+                top: .25em;
+            }
+        }
     }
 
     .when {
         font-style: italic;
+        position: relative;
+
+        @media (min-width:  breakpoint-min("md")) {
+            &::before {
+                content: "⚪︎";
+                color: lightblue;
+                font-style: normal;
+                position: absolute;
+                left: 0px;
+                font-size: 75%;
+                left: -.75em;
+                top: .25em;
+            }
+        }
     }
+
 
     .skills {
         padding-left: 2rem;
+        position: relative;
+
+        @media (min-width:  breakpoint-min("md")) {
+            &::before {
+                content: "⚪︎";
+                color: lightblue;
+                position: absolute;
+                left: 0px;
+                font-size: 75%;
+                left: -.75em;
+                top: .25em;
+            }
+        }
     }
 
     // border-top: 2px solid lightblue;
-    border-left: 2px solid lightblue;
 
     @media (min-width: 768px) {
         h2 {
@@ -104,6 +144,11 @@ h2 {
 
 .education {
     .when {
+        text-align: right;
+        margin-left: calc(-0.5* var(--bs-gutter-x));
+        margin-right: calc(-0.5* var(--bs-gutter-x));
+    }
+    .when_old {
         display: inline-block;
         width: 7em;
         text-align: right;
