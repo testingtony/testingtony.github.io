@@ -83,7 +83,10 @@ a {
 
 .job {
     position: relative;
- 
+    margin-bottom: 0cm;
+    margin-top: 0cm;
+
+
     .description, .skills, .details {
         position: relative;
         margin-left: $indent;
@@ -92,6 +95,8 @@ a {
 
     p {
         margin-top: 0cm;
+        margin-bottom: 0cm;
+        padding-bottom: 4pt;
     }
 
     .description {
