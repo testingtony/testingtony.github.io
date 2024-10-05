@@ -4,19 +4,15 @@
 @page {
     size: a4;
     margin: 12.5mm;
-
 }
 
-$fontsize: 10pt;
+$fontsize: 9.5pt;
 $indent: 22mm;
 
 body {
     position: relative;
-    // font-family: Arial, Helvetica, sans-serif;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: $fontsize;
-    // border: 1px solid salmon;
-    // width: 205mm;
 }
 
 #qrlink {
@@ -141,7 +137,26 @@ a {
         list-style: none;
         padding-left: 0cm;
     }
+}
 
+.education {
+    ul {
+        padding-left: 0cm;
+        position: relative;
+        list-style: none;
+    }
+    li {
+        display: flex;
+    }
+    .when {
+        flex: 0 0  $indent - 2mm;
+        width: $indent - 2mm;
+        text-align: right;
+        padding-left: 0cm;
+        padding-right: 2mm;
+    }
+    .what {
+        flex: 0 0 170mm
+    }
 
-    
 }
