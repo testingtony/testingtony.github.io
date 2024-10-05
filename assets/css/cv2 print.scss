@@ -120,6 +120,10 @@ a {
             content: ", ";
         }
 
+        &::after {
+            content:".";
+        }
+
     }
 
     .skills {
