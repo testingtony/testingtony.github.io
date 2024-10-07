@@ -52,11 +52,11 @@ jobs:
         env:
           JEKYLL_ENV: production
       - name: make cv pdf
+        uses: browser-actions/setup-chrome@v1
         run: |
-          sudo apt update
-          sudo apt install -y weasyprint
           sudo ln -s $PWD/_site/assets /
-          weasyprint _site/cv.html _site/cv.pdf          
+          cd _site
+          chromium --headless --disable-gpu --no-pdf-header-footer --print-to-pdf="cv.pdf" cv.html
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
