@@ -14,13 +14,13 @@ skills:
     SQL:  14 years
     Java: 10 years
     Scala: 6 months
-    Python: 4 years
+    Python: 6 years
   Environments:
     Solaris: 10 years
     CentOS/Redhat: 8 years
     Sybase: 8 years
     Oracle: 4 years
-    MySQL: 2 years
+    MySQL: 7 years
     PostgreSQL: 2 years
 education:
   "Qualifications and Education":
