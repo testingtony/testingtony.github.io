@@ -3,8 +3,8 @@
     who: Siemens Nixdorf/Tesco
     role:  Next-Gen EPOS Release Support
     when: 
-    - 1999-2000
-    - 1998-1999
+    - 1999&ndash;2000
+    - 1998&ndash;1999
     skills:
     - Ksh.
     - AIX 4.3.1.
