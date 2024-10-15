@@ -81,6 +81,10 @@ a {
     }
 }
 
+#Summary+div p {
+    text-align: justify;
+}
+
 .job {
     position: relative;
     margin-bottom: 0cm;
@@ -97,6 +101,7 @@ a {
         margin-top: 0cm;
         margin-bottom: 0cm;
         padding-bottom: 4pt;
+        text-align: justify;
     }
 
     .description {
