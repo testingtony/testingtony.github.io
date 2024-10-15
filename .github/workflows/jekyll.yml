@@ -51,6 +51,10 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+      - name: setup fonts
+        run: |
+          sudo apt install ttf-mscorefonts-installer
+          sudo fc-cache -f
       - name: setup chromium
         uses: browser-actions/setup-chrome@v1
       - name: make a pdf cv
