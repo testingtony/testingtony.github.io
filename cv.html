@@ -54,10 +54,12 @@
                 <div class="headline row col-lg-3 col-md-4">
                     <h2 class="description col-sm-12">
                         <span class="role">{{ job.role }}</span>
+                        <span class="opunc">&mdash;</span>
                         <span class="who">{{ job.who }}</span>
                         {%- if job.team -%}
-                        <span class="team"> {{ job.team }}</span>
+                            <span class="opunc">, </span><span class="team">{{ job.team }}</span>
                         {%- endif -%}
+                        <span class="opunc">.</span>
                     </h2>
                     <ul class="list-unstyled when col-sm-3 col-md-12">
                         {% for dates in job.when %}
@@ -88,10 +90,12 @@
                 <div class="headline row col-lg-3 col-md-4">
                     <h2 class="description col-sm-12">
                         <span class="role">{{ job.role }}</span>
+                        <span class="opunc">&mdash;</span>
                         <span class="who">{{ job.who }}</span>
                         {%- if job.team -%}
-                            <span class="team"> {{ job.team }}</span>
+                            <span class="opunc">, </span><span class="team">{{ job.team }}</span>
                         {%- endif -%}
+                        <span class="opunc">.</span>
                     </h2>
                     <ul class="list-unstyled when col-sm-3 col-md-12">
                         {% for dates in job.when %}

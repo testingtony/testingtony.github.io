@@ -118,27 +118,16 @@ h2 {
         }
     }
 
-    @media (min-width: 768px) {
+    
+    @media (min-width: breakpoint-min("md")) {
         h2 {
 
             display: flex;
             flex-direction: column;
         }
-    }
 
-    @media (max-width: 768px) {
-        h2 {
-            .who::before {
-                content: "— "
-            }
-
-            .team::before {
-                content: ", "
-            }
-
-            &::after {
-                content:".";
-            }
+        .opunc {
+            display: none;
         }
     }
 

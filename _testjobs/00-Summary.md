@@ -38,7 +38,7 @@ education:
     - 1994 C Programming for Unix Systems.
     - 1992 Introduction to SQL / Fastrack to Sybase.
 ---
-Tony is an ISTQB qualified test engineer and ITIL qualified support engineer. He has delivered in both agile (scrum and kanban) and waterfall projects
+Tony is an award-winning, ISTQB qualified test engineer and ITIL qualified support engineer. He has delivered in both agile (scrum and kanban) and waterfall projects
 as well as mixed agile-waterfall projects. He has taken the role of test lead with teams of both experienced and new testers. Working as a consultant
 with multiple clients Tony has experience of many industries, developer teams, and test tools and approaches.
 

@@ -114,21 +114,6 @@ a {
         .role {
             font-weight: 600;
         }
-
-        .who {
-            &::before {
-                content: "— ";
-            }
-        }
-
-        .team::before {
-            content: ", ";
-        }
-
-        &::after {
-            content:".";
-        }
-
     }
 
     .skills {
