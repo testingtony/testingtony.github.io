@@ -38,7 +38,7 @@
                         <h2>{{ skillset[0] }}</h2>
                         <ul>
                             {% for skill in skillset[1] %}
-                            <li><span class="what">{{ skill[0] }}</span> <span class="howlong">{{ skill[1] }}</span></li>
+                            <li class="{% if forloop.index0 > 2 %}d-detail{% endif %}"><span class="what">{{ skill[0] }}</span> <span class="howlong">{{ skill[1] }}</span></li>
                             {% endfor %}
                         </ul>
                     </section>
