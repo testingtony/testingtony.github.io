@@ -105,6 +105,10 @@ h2 {
         padding-left: 2rem;
         position: relative;
 
+        @media (min-width: breakpoint-min("sm")) and (max-width: breakpoint-max("md")) {
+            padding-left: 0rem;
+        }
+
         @media (min-width:  breakpoint-min("md")) {
             &::before {
                 content: url(/assets/circle.svg);
@@ -114,6 +118,7 @@ h2 {
                 top: 0px;
             }
         }
+
     }
 
     
