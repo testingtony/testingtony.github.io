@@ -76,12 +76,11 @@ h2 {
 
         @media (min-width:  breakpoint-min("md")) {
             &::before {
-                content: "⚪︎";
-                color: lightblue;
+                content: url(/assets/circle.svg);
+                scale: 100%;
                 position: absolute;
-                font-size: 75%;
-                left: .25em;
-                top: .25em;
+                left: 4px;
+                top: 1px;
             }
         }
     }
@@ -92,14 +91,11 @@ h2 {
 
         @media (min-width:  breakpoint-min("md")) {
             &::before {
-                content: "⚪︎";
-                color: lightblue;
-                font-style: normal;
+                content: url(/assets/circle.svg);
+                scale: 90%;
                 position: absolute;
-                left: 0px;
-                font-size: 60%;
-                left: -.75em;
-                top: .50em;
+                left: -8px;
+                top: 1px;
             }
         }
     }
@@ -111,13 +107,11 @@ h2 {
 
         @media (min-width:  breakpoint-min("md")) {
             &::before {
-                content: "⚪︎";
-                color: lightblue;
+                content: url(/assets/circle.svg);
+                scale: 80%;
                 position: absolute;
-                left: 0px;
-                font-size: 50%;
-                left: -.75em;
-                top: .75em;
+                left: -8px;
+                top: 0px;
             }
         }
     }
