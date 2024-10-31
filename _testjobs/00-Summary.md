@@ -2,25 +2,25 @@
 type: summary
 skills:
   Test:
-    Junit: 3 years
-    Selenium: 2 months
-    ScalaTest: 6 months
-    ScalaCheck: 6 months
+    pytest: 4 years
+    JUnit: 3 years
+    DBT: 2 years
+    Postman: 1 year
+    Selenium: 4 months
     Jenkins CI: 4 years
-    Jira: 6 years
   Languages:
-    "Shell (bash, ksh)": 20 years
-    Perl: 16 years
+    Python: 6 years
     SQL:  14 years
     Java: 10 years
+    "Shell (bash, ksh)": 20 years
+    Perl: 16 years
     Scala: 6 months
-    Python: 4 years
   Environments:
-    Solaris: 10 years
+    Linux: 12 years
+    Docker: 4 years
+    SQL Server: 5 years
+    Snowflake: 2 years
     CentOS/Redhat: 8 years
-    Sybase: 8 years
-    Oracle: 4 years
-    MySQL: 2 years
     PostgreSQL: 2 years
 education:
   "Qualifications and Education":
