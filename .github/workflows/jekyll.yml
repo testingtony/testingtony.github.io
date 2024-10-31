@@ -62,7 +62,7 @@ jobs:
         run: |
           sudo ln -s $PWD/_site/assets /
           cd _site
-          chromium --headless --disable-gpu --no-pdf-header-footer --print-to-pdf="cv.pdf" cv.html
+          chromium --headless --disable-gpu --no-pdf-header-footer --print-to-pdf="cv/tonyholroyd.pdf" cv/index.html
       - name: install python
         uses: actions/setup-python@v5
         with:
@@ -70,7 +70,7 @@ jobs:
       - name: make a word cv
         run: |
           pip install _apps/jekyll_to_docx-0.1.0-py3-none-any.whl
-          makedoc _site/cv.docx
+          makedoc _site/cv/tonyholroyd.docx
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
