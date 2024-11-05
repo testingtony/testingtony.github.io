@@ -51,7 +51,7 @@
         {% assign jobs = cvdetails | where: "type", "permanent" %}
         {% for job in jobs reversed %}
             <section class="job row mb-5">
-                <div class="headline row col-lg-3 col-md-4">
+                <div class="headline row col-md-4">
                     <h2 class="description col-sm-12">
                         <span class="role">{{ job.role }}</span>
                         <span class="opunc">&mdash;</span>
@@ -74,7 +74,7 @@
                         </ul>
                     {% endif %}
                 </div>
-                <div class="details col-lg-9 col-md-8">
+                <div class="details col-md-8">
                 {{ job.content }}
                 </div>
             </section>
@@ -87,7 +87,7 @@
         {% assign jobs = cvdetails | where: "type", "contract" %}
         {% for job in jobs reversed %}
             <section class="job row mb-5">
-                <div class="headline row col-lg-3 col-md-4">
+                <div class="headline row col-md-4">
                     <h2 class="description col-sm-12">
                         <span class="role">{{ job.role }}</span>
                         <span class="opunc">&mdash;</span>
@@ -108,7 +108,7 @@
                         {% endfor %}
                     </ul>
                 </div>
-                <div class="details col-lg-9 col-md-8">
+                <div class="details col-md-8">
                 {{ job.content }}
                 </div>
             </section>
@@ -125,7 +125,7 @@
                     {% for qual in education[1] %}
                         {% assign when = qual | split: " " | first %}
                         {% assign what = qual | split: " " | shift | join: " " %}
-                        <li class="row"><span class="when col-lg-3 col-md-4 col-3">{{ when }}</span> <span class="what col-lg-9 col-md-8 col-9">{{ what }}</span></li>
+                        <li class="row"><span class="when col-4">{{ when }}</span> <span class="what col-8">{{ what }}</span></li>
                     {% endfor %}
                 </ul>
             </section>
