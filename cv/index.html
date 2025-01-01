@@ -30,7 +30,8 @@
         </div>
 
         <header class="display-5">Tony John Holroyd</header>
-        <p>{{ "9191 233 0870 / ku.oc.dyorlohynot@nideknil" | split: "" | reverse | join: "" }}</p>
+        {% comment %} <p>{{ "9191 233 0870 / ku.oc.dyorlohynot@nideknil" | split: "" | reverse | join: "" }}</p> {% endcomment %}
+        <p>{{ "ku.oc.dyorlohynot@nideknil" | split: "" | reverse | join: "" }}</p>
 
         {% assign cvdetails = site.testjobs %}
 
