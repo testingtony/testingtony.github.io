@@ -29,8 +29,8 @@
         </div>
 
         <header class="display-5">Tony John Holroyd</header>
-        {% comment %} <p>{{ "9191 233 0870 / ku.oc.dyorlohynot@nideknil" | split: "" | reverse | join: "" }}</p> {% endcomment %}
-        <p>{{ "ku.oc.dyorlohynot@nideknil" | split: "" | reverse | join: "" }}</p>
+        <p>{{ "9191 233 0870 / ku.oc.dyorlohynot@nideknil" | split: "" | reverse | join: "" }}</p> 
+        {% comment %} <p>{{ "ku.oc.dyorlohynot@nideknil" | split: "" | reverse | join: "" }}</p> {% endcomment %}
 
         {% assign cvdetails = site.testjobs %}
 
@@ -144,9 +144,6 @@
         </div>
 
     </div>
-    <div class="d-print-none sticky-xxl-bottom">
-        <a href="/assets/tonyholroyd.docx" title="download as word doc" class="d-xxl-flex d-inline-flex"><img src="/assets/file-earmark-word.svg" alt="download the webpage in Word format" width="32" height="32"/></a>
-        <a href="/assets/tonyholroyd.pdf" title="download as pdf doc" class="d-xxl-flex d-inline-flex"><img src="/assets/file-earmark-pdf.svg" alt="download the webpage in PDF format" width="32" height="32"/></a>
-    </div>
+    {% include cv_downloads.html %}
   </body>
 </html>
