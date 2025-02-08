@@ -1,0 +1,159 @@
+--- 
+---
+
+@import "bootstrap/bootstrap";
+
+body {
+    background-color: rgb(255, 255, 250);
+}
+
+a {
+    color: #00f;
+}
+
+#qrlink {
+    display: none;
+}
+
+header {
+    text-align: center;
+     &+p {
+        text-align: center;
+    }
+
+}
+
+h1 {
+    // border-top: 2px solid royalblue;
+    text-align: left;
+    // color: royalblue;
+    @include font-size(2rem);
+}
+
+h2 {
+    font-weight: 400;
+    @include font-size(1.2rem);
+
+}
+
+.keyskill {
+    h2 {
+        font-weight: 500;
+    }
+
+    .what {
+        display: inline-block;
+        width: 50%;
+    }
+
+    @media (min-width: 768px) {
+        section {
+            border-left: 1px solid lightblue;
+            &:first-child {
+                border-left: 0px solid white;
+            }
+        }
+    }
+}
+
+@media (min-width: breakpoint-min("md")) {
+    #Summary+div,.job {
+        p {text-align: justify;}
+    }
+}
+
+@media (max-width: breakpoint-max("md")) {
+    .d-detail { display: none;}
+}
+
+
+.job {
+    border-left: 2px solid lightblue;
+
+    .headline { 
+        height: fit-content;
+        position: relative;
+
+        @media (min-width:  breakpoint-min("md")) {
+            &::before {
+                content: url(/assets/circle.svg);
+                scale: 100%;
+                position: absolute;
+                left: 4px;
+                top: 1px;
+            }
+        }
+    }
+
+    .when {
+        font-style: italic;
+        position: relative;
+
+        @media (min-width:  breakpoint-min("md")) {
+            &::before {
+                content: url(/assets/circle.svg);
+                scale: 90%;
+                position: absolute;
+                left: -8px;
+                top: 1px;
+            }
+        }
+    }
+
+
+    .skills {
+        padding-left: 2rem;
+        position: relative;
+
+        @media (min-width: breakpoint-min("sm")) and (max-width: breakpoint-max("md")) {
+            padding-left: 0rem;
+        }
+
+        @media (min-width:  breakpoint-min("md")) {
+            &::before {
+                content: url(/assets/circle.svg);
+                scale: 80%;
+                position: absolute;
+                left: -8px;
+                top: 0px;
+            }
+        }
+
+    }
+
+    
+    @media (min-width: breakpoint-min("md")) {
+        h2 {
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .opunc {
+            display: none;
+        }
+    }
+
+    .role {
+        font-weight: 600;
+    }
+}
+
+
+.education {
+    .when {
+        text-align: right;
+        margin-left: calc(-0.5* var(--bs-gutter-x));
+        margin-right: calc(-0.5* var(--bs-gutter-x));
+    }
+    .when_old {
+        display: inline-block;
+        width: 7em;
+        text-align: right;
+        padding-right: 4px;
+    }
+}
+
+.downloadtext {
+    display: none;
+}

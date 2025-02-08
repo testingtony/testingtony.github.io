@@ -1,0 +1,23 @@
+collections:
+  testjobs:
+
+defaults:
+  - scope:
+      path: ""
+      type: "jobs"
+    values:
+      layout: "job"
+
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-autoprefixer
+
+autoprefixer:
+  browsers:
+    - last 4 versions
+
+sass:
+  # style: compresse
+  quiet_deps: true
