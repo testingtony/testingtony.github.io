@@ -37,9 +37,9 @@
         {% assign summary = cvdetails | where: "type", "summary" | first %}
 
         <h1 id="Summary">Summary</h1>
-        <main>
+        <article>
         {{ summary.content }}
-        </main>
+        </article>
 
         <h1 id="keyskills">Key Skills</h1>
         <div class="keyskill row mb-5">

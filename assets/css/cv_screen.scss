@@ -57,7 +57,7 @@ h2 {
 }
 
 @media (min-width: breakpoint-min("md")) {
-    #Summary+main,.job {
+    #Summary+article,.job {
         p {text-align: justify;}
     }
 }
