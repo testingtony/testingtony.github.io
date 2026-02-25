@@ -29,7 +29,6 @@ education:
     - 1988–1991 BSc (Hons) Degree Computer Science — University of Leeds, W. Yorkshire.
     - 1981–1988 4 ‘A’-levels and 10 ‘O’-levels — Hipperholme Grammar School, W. Yorkshire.
   "Non-Qualification Courses":
-    - 2019 HSE First-aid in the Workplace.
     - 2007 Advanced Eurex Administration.
     - 2004 Java Programming.
     - 2001 GL Trade Server Management, Eurex MISS Installation/Administration, Eurex Clearing.
